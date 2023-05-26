@@ -77,11 +77,11 @@ const Login = () => {
           </div>
           <div className="inputfield">
             <label>Email</label>
-            <input ref={email} type="text" className="input" />
+            <input ref={email} type="email" className="input" />
           </div>
           <div className="inputfield">
             <label>Password</label>
-            <input ref={password} type="text" className="input" />
+            <input ref={password} type="password" className="input" />
           </div>
           <div className="inputfield">
             <input type="submit" value="Register" className="btn" onClick={clickHandler} />

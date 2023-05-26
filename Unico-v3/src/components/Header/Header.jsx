@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Link ,Navigate, useNavigate } from "react-router-dom";
 import { TbSearch } from "react-icons/tb";
 import { CgShoppingCart } from "react-icons/cg";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineDown } from "react-icons/ai";
 import "./Header.scss";
 import Search from "./Search/Search";
 import { Context } from "../../utils/Context";
@@ -70,7 +70,7 @@ const Header = () => {
                         <li><Link className="link" to="/">Home</Link></li>
             
                        <div class="dropdown">
-                            <button class="dropbtn">Categories ⬇️
+                            <button class="dropbtn">Categories <AiOutlineDown size={20}/>
                                 <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content font-loader">

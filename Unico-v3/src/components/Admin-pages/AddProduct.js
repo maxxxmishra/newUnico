@@ -99,11 +99,11 @@ const AddJob = () => {
           </div>
           <div class="inputfield">
             <label>price</label>
-            <input ref={price} type="text" class="input" />
+            <input ref={price} type="number" class="input" />
           </div>
           <div class="inputfield">
             <label>productWeight</label>
-            <input ref={productWeight} type="text" class="input" />
+            <input ref={productWeight} type="number" class="input" />
           </div>
           <div class="inputfield">
             <label>ingredents</label>
@@ -111,15 +111,15 @@ const AddJob = () => {
           </div>
           <div class="inputfield">
             <label>shelfLife</label>
-            <input ref={shelfLife} type="text" class="input" />
+            <input ref={shelfLife} type="number" class="input" />
           </div>
           <div class="inputfield">
             <label>productStock</label>
-            <input ref={productStock} type="text" class="input" />
+            <input ref={productStock} type="number" class="input" />
           </div>
           <div class="inputfield">
             <label>productImage</label>
-            <input ref={productImage} type="text" class="input" />
+            <input ref={productImage} type="file" class="input" />
           </div>
 
           <div class="inputfield">

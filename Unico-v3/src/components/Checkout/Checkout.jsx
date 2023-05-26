@@ -97,21 +97,21 @@ razor.open();
             </div>
             <div class="inputBox">
                 <span>Phone:</span>
-                <input type="text" placeholder="mumbai"/>
+                <input type="number" placeholder="10 digit number"/>
             </div>
 
             <div class="flex">
                 <div class="inputBox">
                     <span>City:</span>
-                    <input type="text" placeholder="india"/>
+                    <input type="text" placeholder="Jabalpur"/>
                 </div>
                 <div class="inputBox">
                     <span>State :</span>
-                    <input type="text" placeholder="123 456"/>
+                    <input type="text" placeholder="Madhya Pradesh"/>
                 </div>
                 <div class="inputBox">
                     <span>zip code :</span>
-                    <input type="text" placeholder="123 456"/>
+                    <input type="number" placeholder="482001"/>
                 </div>
             </div>
 

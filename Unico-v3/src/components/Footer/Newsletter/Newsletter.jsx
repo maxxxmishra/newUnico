@@ -4,6 +4,7 @@ import {
     FaTwitter,
     FaInstagram,
     FaLinkedinIn,
+    FaWhatsapp
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "./Newsletter.scss";
@@ -35,6 +36,9 @@ const Newsletter = () => {
                     </Link>
                     <Link to="https://www.instagram.com/" className="icon">
                         <FaInstagram size={14} />
+                    </Link>
+                    <Link to="https://api.whatsapp.com/send?phone=919669559988&text=Hello" className="icon">
+                        <FaWhatsapp  size={14} />
                     </Link>
                 </span>
             </div>

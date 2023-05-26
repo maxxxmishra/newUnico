@@ -39,7 +39,6 @@
             font-size: 14px;
             display: block;
             text-align: center;
-            color: rgb(0, 187, 255);
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -51,11 +50,13 @@
         }
 
         .price {
-            font-size: 18px;
-            color: rgb(19, 193, 19);
+            font-size: 12px;
 
             @include md {
-                font-size: 24px;
+                font-size: 15px;
+            }
+            s{
+                margin: 4px;
             }
         }
     }
@@ -79,13 +80,16 @@
         width: 150px;
         cursor: pointer;
         font-size: 16px;
-        color: white;
-        background: #8e2de2;
-        border-bottom: 3px solid #6516aa;
+        color: #6516aa;
+        border: 1px solid #6516aa;
+        
+        background: white;
+        // border-bottom: 3px solid #6516aa;
         flex-grow: 1;
 
         @include md {
             flex-grow: unset;
+            width: 250px;
         }
 
         svg {

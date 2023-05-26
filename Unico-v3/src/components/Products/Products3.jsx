@@ -10,9 +10,9 @@ const Products = ({headingText}) => {
         {/* <span> Bite-sized, incredibly delicious gluten-free millet cookies. </span> */}
         
         <div className="products" >
-            <Product2 li ={'/Millet-Meusli'}/>
-            <Product2 li = {'/Millet-Laddo'}/>
-            <Product2 li = {'/Millet-Bar'}/>
+        <Product2 li ={'/Millet-Meusli'} nameText={"Millet Meusli"} strikePrice={"Rs . 159"} normalPrice={"Rs . 139"}/>
+        <Product2 li = {'/Millet-Laddo'} nameText={"Millet Laddo"} strikePrice={"Rs . 199"} normalPrice={"Rs . 179"}/>
+        <Product2 li = {'/Millet-Bar'} nameText={"MilletBar"} strikePrice={"Rs . 219"} normalPrice={"Rs . 199"}/>
         </div>
     </div>;
 };

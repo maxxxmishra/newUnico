@@ -65,7 +65,7 @@ const Login = () => {
           </div>
           <div className="inputfield">
             <label>Password</label>
-            <input ref={password} type="text" className="input" />
+            <input ref={password} type="password" className="input" />
           </div>
           <div className="inputfield">
             <input type="submit" value="Login" className="btn" onClick={clickHandler}/>
