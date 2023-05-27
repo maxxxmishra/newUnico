@@ -43,7 +43,7 @@ When you take the first bite of these ‘little sweet-little salty’ magical co
                     <div className="info-item">
                         
                         <span className="text-bold">Ingredients : <br />
-                            <span> Ingredint 1 </span>
+                            <span> Ingredient 1 </span>
                             <br />
                             <span> Ingredient 2 </span>
                         </span>

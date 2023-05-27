@@ -74,7 +74,6 @@ const Header = () => {
                             <Link to="/">
                                 <img src={Unico} alt="" />
                             </Link>
-          
                         </div>
                         
                         <Link className="linkcenter" to="/">Unico Foods</Link></div>
