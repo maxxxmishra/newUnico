@@ -2,12 +2,15 @@ import { useEffect, useState, useContext } from "react";
 import { Link ,Navigate, useNavigate } from "react-router-dom";
 import { TbSearch } from "react-icons/tb";
 import { CgShoppingCart } from "react-icons/cg";
-import { AiOutlineUser, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
 import "./Header.scss";
 import Search from "./Search/Search";
 import { Context } from "../../utils/Context";
 import Cart from "../Cart/Cart";
 import WebFont from 'webfontloader';
+// import { AiOutlineDown } from "@react-icons/all-files";
+import { AiOutlineDown } from "react-icons/ai";
+import Unico from "../../assets/Unico.jpeg"
 
 import "./Header.scss";
 const Header = () => {
@@ -63,16 +66,31 @@ const Header = () => {
         <>
             <header className={`main-header ${scrolled ? 'sticky-header' : ' '}`}>
                 <div className="header-content">
-                    <div className="center"><Link className="linkcenter" to="/">Unico Foods</Link></div>
+                    <div className="center">
+                        {/* <div className="image">
+                        <Link><img src ={Unico}/></Link>
+                        </div> */}
+                        <div class="brand-name">
+                            <Link to="/">
+                                <img src={Unico} alt="" />
+                            </Link>
+          
+                        </div>
+                        
+                        <Link className="linkcenter" to="/">Unico Foods</Link></div>
                     
                     <oll className="left">
             
                         <li><Link className="link" to="/">Home</Link></li>
             
                        <div class="dropdown">
-                            <button class="dropbtn">Categories <AiOutlineDown size={20}/>
-                                <i class="fa fa-caret-down"></i>
+                            <button class="dropbtn">Categories 
+                                {/* <i class="AiOutlineDown"></i> */}
+                                
+                                <AiOutlineDown className="reactIcon"/> 
+                                
                             </button>
+                            
                             <div class="dropdown-content font-loader">
                                 <li><Link className="linkd" to="/allProducts">allProducts</Link></li>
                                 <li><Link className="linkd" to="/Millet-Meusli">Millet-Meusli</Link></li>

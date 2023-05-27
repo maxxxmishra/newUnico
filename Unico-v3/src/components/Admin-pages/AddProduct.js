@@ -101,6 +101,10 @@ const AddJob = () => {
             <label>price</label>
             <input ref={price} type="number" class="input" />
           </div>
+          {/* <div class="inputfield">
+            <label>discount</label>
+            <input ref={ type="number" class="input" />
+          </div> */}
           <div class="inputfield">
             <label>productWeight</label>
             <input ref={productWeight} type="number" class="input" />

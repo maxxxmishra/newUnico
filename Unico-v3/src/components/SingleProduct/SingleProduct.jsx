@@ -26,7 +26,7 @@ const SingleProduct = () => {
                 </div>
                 <div className="right">
                     <span className="name">{pro.productName}</span>
-                    <span className="price">{pro.price}</span>
+                    <span className="price"><s>Rs. 200</s>Rs. {pro.price}</span>
                     <span className="description">{pro.productDescription}</span>
 
                     <div className="cart-buttons">

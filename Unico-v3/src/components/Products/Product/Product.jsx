@@ -17,7 +17,7 @@ const Product = ({name , price}) => {
 
         <div className="product-details">
           <span className="name">{name}</span>
-          <span className="price">{price}</span>
+          <span className="price">Rs . {price}</span>
           <div className="cart-buttons">
             <button className="add-to-cart-button">
               {/* <FaCartPlus size={20} /> */}

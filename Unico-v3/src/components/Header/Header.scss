@@ -1,5 +1,21 @@
 @import "../../css-config/mixins.scss";
 
+.reactIcon{
+    padding-top: 6px;
+}
+.image{
+    width: 10px !important;
+        height: 10px !important;
+        // border-radius: 50%;
+        // overflow: hidden;
+        margin-top: -6px;
+}
+.brand-name img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    margin: auto;
+}
 .font-loader {
     font-family: 'Chilanka';
 }
@@ -8,7 +24,7 @@
     width: 100%;
     padding: 0 20px;
     z-index: 99;
-    background-color: blueviolet;
+    background-color: #541a92;
     color: white;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     font-size: 20px ;
@@ -19,7 +35,7 @@
         background-color: cyan;
     }
     @include lg{
-        background-color:rgb(185, 141, 227);
+        background-color:#541a92;
     }
     .header-content {
         display: flex;
@@ -35,7 +51,7 @@
     .left {
         list-style-type: none;
         position: absolute;
-        left : 25% ;
+        left : 26% ;
         display: none;
         gap: 25px;
         @include md {
@@ -62,6 +78,8 @@
     .center {
         font-size: 22px;
         font-weight: 700;
+        display: flex;
+        align-items: center;
         cursor: pointer;
         @include md {
             font-size: 22px;
@@ -119,7 +137,7 @@
         }
     }
     &.sticky-header {
-        // background-color: #fb08e7;
+        background-color: #fb08e7;
         color: white;
         position: sticky;
         top: 0;
@@ -127,10 +145,10 @@
         animation: StickyHeader 0.3s ease forwards;
 
         @include sm{
-            background-color: cyan;
+            background-color: blueviolet;
         }
         @include lg{
-            background-color: blueviolet;
+            background-color: #541a92;
         }
     }
 }
@@ -185,7 +203,7 @@
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: rgb(185, 141, 227);
+    background-color: #541a92;
 }
 
 /* Dropdown content (hidden by default) */

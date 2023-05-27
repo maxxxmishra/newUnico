@@ -18,8 +18,8 @@ const SingleProduct = () => {
                     <img src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360" alt="" />
                 </div>
                 <div className="right">
-                    <span className="name">Product Name</span>
-                    <span className="price">Product Price</span>
+                    <span className="name">Millet Meusli</span>
+                    <span className="price"><s>Rs . 200</s>Rs . 150</span>
                     <span className="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dicta asperiores cupiditate magni repellendus, laudantium perferendis quae aliquam praesentium assumenda dignissimos alias nisi exercitationem similique quisquam? Natus culpa et consequuntur architecto atque amet reprehenderit placeat mollitia exercitationem illum, maxime repellat?</span>
 
                     <div className="cart-buttons">
