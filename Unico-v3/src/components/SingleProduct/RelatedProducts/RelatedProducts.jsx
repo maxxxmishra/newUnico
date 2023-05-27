@@ -1,8 +1,9 @@
-import Products from "../../Products/Products";
+import Products3 from "../../Products/Products3";
 
 const RelatedProducts = () => {
     return <div className="related-products">
-        <Products headingText = "People Also Bought"/>
+        <Products3 headingText = "People Also Bought"/>
+        
     </div>;
 };
 

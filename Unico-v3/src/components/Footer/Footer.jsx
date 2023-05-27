@@ -35,9 +35,9 @@ const Footer = () => {
             </div>
             <div className="fotcol">
                 <div className="fottitle">Categories</div>
-                <span className="fottext"><Link className="link" to="/category/1">Millet Meusli</Link></span>
-                <span className="fottext"><Link className="link" to="/category/1">Millet Bars</Link></span>
-                <span className="fottext"><Link className="link" to="/category/1">Millet Ladoos</Link></span>
+                <span className="fottext"><Link className="link" to="/Millet-Meusli">Millet Meusli</Link></span>
+                <span className="fottext"><Link className="link" to="/Millet-Bar">Millet Bars</Link></span>
+                <span className="fottext"><Link className="link" to="/Millet-Laddo">Millet Laddos</Link></span>
             </div>
             <div className="fotcol">
                 <div className="fottitle">Pages</div>

@@ -7,7 +7,7 @@ const CartItem = () => {
     <div className="cart-products">
         <div className="cart-product">
             <div className="image-container">
-                <img src={prod} alt="" />
+                <img src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360" alt="" />
             </div>
             <div className="prod-details">
                 <span className="name">product Name</span>

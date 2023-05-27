@@ -79,7 +79,7 @@ const SingleProduct = () => {
             </div>
           </div>
           {/* <img className="low-image" src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/Quality_Check_21.png?v=1664780757&width=710" alt="" /> */}
-          {/* <RelatedProducts/> */}
+          <RelatedProducts/>
         </div>
       </div>
       ;
