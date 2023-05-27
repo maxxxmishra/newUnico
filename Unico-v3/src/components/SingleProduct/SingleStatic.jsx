@@ -18,11 +18,20 @@ const SingleProduct = () => {
                     <img src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360" alt="" />
                 </div>
                 <div className="right">
-                    <span className="name">Millet Meusli</span>
-                    <span className="price"><s>Rs . 200</s>Rs . 150</span>
-                    <span className="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dicta asperiores cupiditate magni repellendus, laudantium perferendis quae aliquam praesentium assumenda dignissimos alias nisi exercitationem similique quisquam? Natus culpa et consequuntur architecto atque amet reprehenderit placeat mollitia exercitationem illum, maxime repellat?</span>
+                    <span className="name">Jowar Ajwain Jaggery Mini Cookies</span>
+                    <span className="price"><s>Rs . 149</s>Rs . 125</span>
+                    <span className="desc">“We all have been listening to our grandmothers about the benefits of Ajwain or Carom Seeds. From being an essential part of the Indian diet to being the key ingredient in some of the best go-to snacks like Namakpaare, Ajwain offers benefits like no other! <br /> <br />
+
+So we thought let’s bake these helpful, kind, seed spices with a humble, generous grain- Jowar. And little did we know that we were creating Magic! <br /> <br />
+
+When you take the first bite of these ‘little sweet-little salty’ magical coin cookies, your brain goes into a bliss state for a few seconds and comes back shouting for more!”</span>
 
                     <div className="cart-buttons">
+                    <div className="quantity-buttons">
+                                <span >-</span>
+                                <span>1</span>
+                                <span >+</span>
+                            </div>
                         <button className="add-to-cart-button">
                             <FaCartPlus size={20}/>
                             Add to Cart
@@ -33,12 +42,12 @@ const SingleProduct = () => {
 
                     <div className="info-item">
                         
-                        <span className="text-bold">Ingredients :
-                            <span> Sample List of Ingredients </span>
+                        <span className="text-bold">Ingredients : <br />
+                            <span> Ingredint 1 </span>
                             <br />
-                            <span> Sample List of Ingredients 2 </span>
+                            <span> Ingredient 2 </span>
                         </span>
-                        <span className="text-bold">Additional Information :
+                        <span className="text-bold">Additional Information : <br />
                             <span> Info 1</span>
                             <br />
                             <span> Info 2</span>

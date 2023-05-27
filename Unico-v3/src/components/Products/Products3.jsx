@@ -12,7 +12,7 @@ const Products = ({headingText}) => {
         <div className="products" >
         <Product2 li ={'/Millet-Meusli'} nameText={"Millet Meusli"} strikePrice={"Rs . 159"} normalPrice={"Rs . 139"}/>
         <Product2 li = {'/Millet-Laddo'} nameText={"Millet Laddo"} strikePrice={"Rs . 199"} normalPrice={"Rs . 179"}/>
-        <Product2 li = {'/Millet-Bar'} nameText={"MilletBar"} strikePrice={"Rs . 219"} normalPrice={"Rs . 199"}/>
+        <Product2 li = {'/Millet-Bar'} nameText={"Millet Bar"} strikePrice={"Rs . 219"} normalPrice={"Rs . 199"}/>
         </div>
     </div>;
 };

@@ -20,6 +20,7 @@ const Home = () => {
                 {/* <SingleProduct/> */}
                 <AboutUS/>
                 {/* <Category/> */}
+                <br />
                 <Products3 headingText = "It's Mini & Mind Boggling Delicious"/>
                
             </div>

@@ -12,7 +12,7 @@
         margin-bottom: 20px;
         font-size: 18px;
         font-weight: 500;
-        text-transform: uppercase;
+        text-transform: capitalize;
 
         @include md {
             margin-bottom: 35px;

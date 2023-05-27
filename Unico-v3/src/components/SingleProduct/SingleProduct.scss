@@ -17,6 +17,12 @@
             @include md {
                 flex-direction: row;
             }
+            .low-image{
+                // text-align: center;
+                // display: block;
+                margin:auto ;
+                width: 50%;
+            }
             .left {
                 width: 100%;
                 margin-bottom: 20%;
@@ -60,7 +66,7 @@
                 }
                 .desc {
                     font-size: 14px;
-                    line-height: 20px;
+                    line-height: 30px;
                     margin-bottom: 20px;
                     color: #6b6b6b;
                     @include md {
