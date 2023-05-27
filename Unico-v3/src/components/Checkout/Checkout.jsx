@@ -2,14 +2,17 @@ import React from 'react'
 import "./Checkout.css"
 import axios from "axios" 
 import Unico from "../../assets/Unico.jpeg"
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 
 const Checkout = () => {
     const Navigate = useNavigate();
+    const p = useLocation()
+    // console.log(p.state);
+    
    
-    const data = {amount : 4500}
+    const data = {amount : p.state}
     const clickHandler = async(e)=>{
          e.preventDefault();
          var amount1 = ''

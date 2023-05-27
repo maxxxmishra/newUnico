@@ -15,7 +15,7 @@ import Unico from "../../assets/Unico.jpeg"
 import "./Header.scss";
 const Header = () => {
     const Navigate = useNavigate() ;
-
+    var q = JSON.parse(localStorage.Cart).length ;
     const[scrolled,setScrolled] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
@@ -106,7 +106,7 @@ const Header = () => {
                         <Link className="link" to = {localStorage.user ? '/user' : '/login'}  ><AiOutlineUser/></Link>
                         <span className="cart-icon" onClick={()=>setShowCart(true)}>
                             <CgShoppingCart/>
-                            <span>5</span>
+                            <span>{q}</span>
                         </span>
                     </div>
                 </div> 

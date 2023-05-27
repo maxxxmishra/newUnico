@@ -6,9 +6,14 @@ import React, { useEffect, useState } from "react";
 // import prod from "../../../assets/products/earbuds-prod-1.webp";
 import { FaCartPlus } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import Cart from "../Cart/Cart";
+
+
 const Products = ({headingText , productCategory}) => {
     const [users, setUsers] = useState([]);
     const Navigate = useNavigate();
+    const [cart , setCart] = useState(JSON.parse(localStorage.Cart)) ;
+    const [showCart, setShowCart] = useState(false);
     
     const allEmploye = async () => {
     try {
@@ -74,8 +79,53 @@ const clicked = (curUser)=>{
   Navigate('/singleProduct' ,{state:curUser} )
 }
 
+
+const clickHandler = (cur)=>{
+  console.log("add to cart  = " ,cur) ;
+  // let cartArray = [] ;
+  
+  // cartArray.push(cur) ;
+  // cartArray.push(cur) ;
+  // setCart([...cart, cur]);
+
+  var array = JSON.parse(localStorage.Cart) ;
+  var flag = 0 ;
+  for(let i = 0 ; i<array.length ;i++){
+    if(array[i].productId===cur.productId){
+      flag = i+1 ;
+      alert("Quantity Increased") ;
+    }
+  }
+
+  if(!flag){
+    array.push(cur)
+  // var showCart = 0 ;
+  setShowCart(true) ;
+  console.log(array) ; 
+  localStorage.setItem("Cart" ,JSON.stringify(array)) ;
+  }
+  else{
+    console.log("else me aagya hu ")
+    let ar = JSON.parse(localStorage.quantity) ;
+    const key = array[flag-1].productId
+    console.log(key) ;
+    // const value = 2 ;
+    
+    ar.push(key)
+
+    // const arr = {array[flag].productId:"5"}
+    // const arr = []
+
+    localStorage.setItem("quantity" , JSON.stringify(ar) )
+  }
+  
+ 
+}
     return <div className="products-container">
         <div className="sec-heading">{headingText}</div>
+        {
+              showCart   && <Cart setShowCart={setShowCart} />
+            }
           <div className="products">
             {users.map((curUser) => {
               const {
@@ -85,25 +135,26 @@ const clicked = (curUser)=>{
               return (
                 // <Product name = {productName} price ={price}/>
                 <div className="product-card">
-      <div className="link" onClick={()=>{clicked(curUser)}}>
-        <div className="thumbnail">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360"
-            alt=""
-          />
+                <div className="link" onClick={()=>{clicked(curUser)}}>
+                <div className="thumbnail">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360"
+                alt=""
+                />
         </div>
 
-        <div className="product-details">
+        
+      </div>
+      <div className="product-details">
           <span className="name">{productName}</span>
           <span className="price">{price}</span>
           <div className="cart-buttons">
-            <button className="add-to-cart-button">
+            <button className="add-to-cart-button" onClick={()=>{clickHandler(curUser)}}>
               <FaCartPlus size={20} />
               Add to Cart
             </button>
           </div>
         </div>
-      </div>
     </div>
               );
             })}
