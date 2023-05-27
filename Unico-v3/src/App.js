@@ -21,9 +21,13 @@ import Checkout from "./components/Checkout/Checkout";
 // import SingleProduct from "./components/SingleProduct/SingleProduct";
 
 function App() {
-  // localStorage.setItem("Cart", JSON.stringify([{}]));
+  var flag = localStorage.Cart;
+  console.log(flag);
+  if (flag === undefined) {
+    localStorage.setItem("Cart", JSON.stringify([]));
 
-  // localStorage.setItem("quantity", JSON.stringify([]));
+    localStorage.setItem("quantity", JSON.stringify([]));
+  }
   return (
     <BrowserRouter>
       <AppContext>
