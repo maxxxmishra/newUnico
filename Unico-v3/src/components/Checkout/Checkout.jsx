@@ -2,10 +2,12 @@ import React from 'react'
 import "./Checkout.css"
 import axios from "axios" 
 import Unico from "../../assets/Unico.jpeg"
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Checkout = () => {
+    const Navigate = useNavigate();
    
     const data = {amount : 4500}
     const clickHandler = async(e)=>{
@@ -26,28 +28,64 @@ const Checkout = () => {
             })
 
 const options = {
-            key :key1  ,// Enter the Key ID generated from the Dashboard
-            amount: amount1, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            key: key1, // Enter the Key ID generated from the Dashboard
+            amount: amount1,
             currency: "INR",
-            name: "Unico",
-            description : "Test Transaction",
-            image  : "https://media.licdn.com/dms/image/D4D0BAQE1RoLu3MGKQA/company-logo_200_200/0/1683434679314?e=2147483647&v=beta&t=L0jzHVX8uXR2yP7UDZQsD74gyizRQEZE7aG8ymFMF6c",
-            order_id: id1, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: "http://localhost:8080/api/v1/Payment/paymentVarification",
+            name: "Soumya Corp.",
+            description: "Test Transaction",
+            image: {Unico},
+            order_id: id1,
+            handler: async function (response) {
+                const data = {
+                    orderCreationId: id1,
+                    razorpayPaymentId: response.razorpay_payment_id,
+                    razorpayOrderId: response.razorpay_order_id,
+                    razorpaySignature: response.razorpay_signature,
+                };
+
+                const result = await axios.post("http://localhost:8080/api/v1/Payment/paymentVarification", data);
+                
+                console.log(result);
+                alert(result.data.message);
+                if(result.data.message==="verified succesfully"){
+                    console.log(result.data.data) ;
+                    const data = {
+                        CustomerId : "11",
+                        firstName : "Saurabh" ,
+                        lastName : "Mishra" ,
+                        address  : "Jp house bai sahab hi pared Gwalior" ,
+                        appartment : "40/906",
+                        city : "Gwalior",
+                        pinCode : "474001",
+                        phone : "6232536423",
+                        productIds : "1 ,2 ,3 ,4 ,5",
+                        OId : result.data.data.razorpayOrderId,
+                        PId : result.data.data.razorpayPaymentId
+                    }
+                    axios.post("http://localhost:8080/api/v1/customer/createCustomer" ,{data :data}).then((res)=>{
+                        console.log(res.data) ;
+                        if(res.data.message==="Customer created successfully"){
+                            alert("Order Recived SuccessFully") ;
+                            Navigate("/") ;
+                        }
+                    })
+                }
+            },
             prefill: {
-            name: "Gaurav Kumar", //login user ka name
-            email: "gaurav.kumar@example.com", //login user
-            contact: "9000090000" //login user
-    },
+                name: "Soumya Dey",
+                email: "SoumyaDey@example.com",
+                contact: "9999999999",
+            },
             notes: {
-                 address: "Razorpay Corporate Office"
+                address: "Soumya Dey Corporate Office",
             },
             theme: {
-                color: "#3399cc"
-            }
-};
-var razor = new window.Razorpay(options);
-razor.open();
+                color: "#61dafb",
+            },
+        };
+
+        const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
             
         
 
@@ -97,21 +135,21 @@ razor.open();
             </div>
             <div class="inputBox">
                 <span>Phone:</span>
-                <input type="number" placeholder="10 digit number"/>
+                <input type="text" placeholder="mumbai"/>
             </div>
 
             <div class="flex">
                 <div class="inputBox">
                     <span>City:</span>
-                    <input type="text" placeholder="Jabalpur"/>
+                    <input type="text" placeholder="india"/>
                 </div>
                 <div class="inputBox">
                     <span>State :</span>
-                    <input type="text" placeholder="Madhya Pradesh"/>
+                    <input type="text" placeholder="123 456"/>
                 </div>
                 <div class="inputBox">
                     <span>zip code :</span>
-                    <input type="number" placeholder="482001"/>
+                    <input type="text" placeholder="123 456"/>
                 </div>
             </div>
 

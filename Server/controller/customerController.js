@@ -5,7 +5,7 @@ const Product = require("../models/productModel");
 
 const createCustomer = asyncHandler(async (req, res) => {
   try {
-    // console.log(req.body.data);
+    console.log(req.body.data);
     const existedCustomer = await Customer.findOne({
       CustomerId: req.body.data.CustomerId,
     });
