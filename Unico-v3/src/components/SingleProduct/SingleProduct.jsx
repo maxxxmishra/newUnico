@@ -22,7 +22,7 @@ const SingleProduct = () => {
         <div className="layout">
             <div className="single-product-page">
                 <div className="left">
-                    <img src={prod} alt="" />
+                    <img src="https://cdn.shopify.com/s/files/1/0600/3680/8804/files/3326DF10-668E-4907-BC91-45415E0EFC64.jpg?v=1661888147&width=360" alt="" />
                 </div>
                 <div className="right">
                     <span className="name">{pro.productName}</span>
