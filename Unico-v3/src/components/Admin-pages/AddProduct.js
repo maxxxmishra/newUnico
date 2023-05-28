@@ -91,7 +91,14 @@ const AddJob = () => {
           </div> */}
           <div class="inputfield">
             <label>productCategory</label>
-            <input ref={productCategory} type="text" class="input" />
+            <div class="custom_select">
+            <select>
+              <option value="">Select</option>
+              <option value="frontend">Category-1</option>
+              <option value="backend">Category-2</option>
+              <option value="fullstack">Category-3</option>
+            </select>
+          </div>
           </div>
           <div class="inputfield">
             <label>productName</label>
