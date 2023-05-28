@@ -164,38 +164,38 @@ const options = {
             <div class="flex">
                 <div class="inputBox">
                     <span>First Name:</span>
-                    <input type="text" placeholder="first name"/>
+                    <input type="text" placeholder="First name"/>
                 </div>
                 <div class="inputBox">
                     <span>Second Name:</span>
-                    <input type="text" placeholder="second name"/>
+                    <input type="text" placeholder="Second name"/>
                 </div>
             </div>
             <div class="inputBox">
                 <span>Address :</span>
-                <input type="text" placeholder="room - street - locality"/>
+                <input type="text" placeholder="House/Apartment Number"/>
             </div>
             <div class="inputBox">
                 <span></span>
-                <input type="text" placeholder="Apartment, suite, etc:"/>
+                <input type="text" placeholder="Landmark, any relevant identifying objects"/>
             </div>
             <div class="inputBox">
                 <span>Phone:</span>
-                <input type="text" placeholder="mumbai"/>
+                <input type="text" placeholder="10 digit contact number"/>
             </div>
 
             <div class="flex">
                 <div class="inputBox">
                     <span>City:</span>
-                    <input type="text" placeholder="india"/>
+                    <input type="text" placeholder="Jabalpur"/>
                 </div>
                 <div class="inputBox">
                     <span>State :</span>
-                    <input type="text" placeholder="123 456"/>
+                    <input type="text" placeholder="M.P."/>
                 </div>
                 <div class="inputBox">
                     <span>zip code :</span>
-                    <input type="text" placeholder="123 456"/>
+                    <input type="text" placeholder="482001"/>
                 </div>
             </div>
 

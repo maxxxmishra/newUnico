@@ -110,7 +110,7 @@
                         outline: 0;
                         border: 0;
                         height: 50px;
-                        width: 180px;
+                        width: 200px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -125,6 +125,10 @@
                         }
                         svg {
                             margin-right: 10px;
+                        }
+                        .link{
+                            font-size: 19px;
+                            color: white;
                         }
                     }
                 }

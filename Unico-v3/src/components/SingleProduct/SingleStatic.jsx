@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import "./SingleProduct.scss";
 import prod from "../../assets/products/earbuds-prod-1.webp"
+import { Link } from "react-router-dom";
 
 const SingleProduct = () => {
     return <div className="single-product-main-content">
@@ -27,14 +28,9 @@ So we thought let’s bake these helpful, kind, seed spices with a humble, gener
 When you take the first bite of these ‘little sweet-little salty’ magical coin cookies, your brain goes into a bliss state for a few seconds and comes back shouting for more!”</span>
 
                     <div className="cart-buttons">
-                    <div className="quantity-buttons">
-                                <span >-</span>
-                                <span>1</span>
-                                <span >+</span>
-                            </div>
                         <button className="add-to-cart-button">
-                            <FaCartPlus size={20}/>
-                            Add to Cart
+                            {/* <FaCartPlus size={20}/> */}
+                            <Link className="link" to="/allProducts">Shop All Products</Link>
                         </button>
                     </div>
 
