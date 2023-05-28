@@ -80,7 +80,7 @@ const Cart = ({setShowCart}) => {
                         <span className="totaltext total">₹ {p}</span>
                     </div>
                     <div className="button">
-                        <button className="checkout-cta" onClick={()=>{Navigate('/checkOut' ,{state : p})}}>CheckOut</button>
+                        <button className="checkout-cta" onClick={()=>{!(localStorage.user) ? Navigate('/user'): Navigate('/checkOut' ,{state : p})}}>CheckOut</button>
                     </div>
                 </div>
                 

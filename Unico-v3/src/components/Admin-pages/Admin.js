@@ -34,7 +34,12 @@ const Admin = () => {
   };
 
   const clickHandler = () => {
-    localStorage.clear();
+    // var arr = JSON.parse(localStorage.user);
+    // console.log(arr);
+    // arr.splice(1, 1);
+    // localStorage.setItem("user", arr);
+    localStorage.removeItem("user");
+
     Navigate("/");
   };
 

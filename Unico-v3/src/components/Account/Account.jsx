@@ -9,7 +9,18 @@ import "../../css-config/mixins.scss"
 const Account = () => {
   const Navigate =  useNavigate();
   const clickHandeler = ()=>{
-    localStorage.clear();
+    // localStorage.removeItem("user");
+    var arr = JSON.parse(localStorage.user)
+    // console.log(arr) ;
+    // arr.slice(0) ;
+    // localStorage.setItem("user" , arr ) ;
+    localStorage.removeItem("user") ;
+    console.log("removed user")
+    //  var flagu = localStorage.user;
+  // if (flagu === undefined) {
+  //   localStorage.setItem("user", JSON.stringify([]));
+  // }
+
     Navigate('/')
   }
 
@@ -34,7 +45,7 @@ const Account = () => {
           </h1>
           <div className="last-text">
             <div className="text1">
-              <h3>UserName - Shivansh Mehta</h3>
+              <h3>UserName - {(JSON.parse(localStorage.user)).firstName + " " + (JSON.parse(localStorage.user)).lastName}</h3>
             </div>
           </div>
           <div className="ctas">

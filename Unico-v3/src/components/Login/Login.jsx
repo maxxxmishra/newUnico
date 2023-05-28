@@ -36,8 +36,12 @@ const Login = () => {
           if (res.data.message === "Login successful") {
             console.log(res.data.data) ;
             // localStorage.clear();
-            let u = JSON.stringify(res.data.data) ;
-            localStorage.setItem("user" , JSON.stringify(u))
+
+            var u = (res.data.data) ;
+            // var arr = JSON.parse(localStorage.user) ;
+            // console.log(u , arr);
+            // arr.push(u) ;
+            localStorage.setItem("user" , JSON.stringify(u));
             console.log(localStorage.user) ;
             
             if(res.data.data.isAdmin){

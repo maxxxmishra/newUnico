@@ -13,6 +13,8 @@ import { AiOutlineDown } from "react-icons/ai";
 import Unico from "../../assets/Unico.jpeg"
 
 import "./Header.scss";
+
+
 const Header = () => {
     const Navigate = useNavigate() ;
     var q = JSON.parse(localStorage.Cart).length ;
@@ -62,6 +64,20 @@ const Header = () => {
    });
   }, []);
 
+  const isadmin = ()=>{
+    var u = JSON.parse(localStorage.user)
+    console.log(u.isAdmin) ;
+
+    if((u.isAdmin)){
+        return  1 ;
+    }
+    else{
+        return 0 ;
+    }
+  }
+
+
+
     return (
         <>
             <header className={`main-header ${scrolled ? 'sticky-header' : ' '}`}>
@@ -103,7 +119,7 @@ const Header = () => {
                     
                     <div className="right">
                         <TbSearch onClick={()=>setShowSearch(true)}/>
-                        <Link className="link" to = {localStorage.user ? '/user' : '/login'}  ><AiOutlineUser/></Link>
+                        <Link className="link" to = {!(localStorage.user) ? '/login' : isadmin() ? "/admin" : "/user"}  ><AiOutlineUser/></Link>
                         <span className="cart-icon" onClick={()=>setShowCart(true)}>
                             <CgShoppingCart/>
                             <span>{q}</span>

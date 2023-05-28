@@ -3,7 +3,15 @@ const mongoose = require("mongoose");
 const Schema = new mongoose.Schema(
   {
     // customer id = user id
+    userId: {
+      type: String,
+      require: true,
+    },
     CustomerId: {
+      type: String,
+      require: true,
+    },
+    email: {
       type: String,
       require: true,
     },
@@ -37,9 +45,16 @@ const Schema = new mongoose.Schema(
       required: true,
     },
 
-    productIds: {
-      type: String,
-      required: true,
+    orderSumery: {
+      orders: {
+        // type: [{}],
+        type: Array,
+        // required: true,
+      },
+      price: {
+        type: Number,
+        // required: true,
+      },
     },
     OId: {
       type: String,

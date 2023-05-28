@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState , useEffect } from 'react'
 import "./Checkout.css"
 import axios from "axios" 
 import Unico from "../../assets/Unico.jpeg"
@@ -8,11 +8,40 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
     const Navigate = useNavigate();
-    const p = useLocation()
+    const price = useLocation()
     // console.log(p.state);
+
+    const [users, setUsers] = useState(0);
+
+  const allcustomer = async () => {
+    try {
+      // console.log("hn hn chal rha hai ");
+      axios
+        .get("http://localhost:8080/api/v1/customer/readAllCustomer")
+        .then((res) => {
+          console.log(res.data.data);
+          var result = res.data.data;
+
+          
+            setUsers(result.length);
+      
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    allcustomer();
+  }, []);
+
+    const user = JSON.parse(localStorage.user)
+                    // console.log(user.userId) ;
+    const product = JSON.parse(localStorage.Cart)
+                    console.log(JSON.stringify(product)) ;                
     
    
-    const data = {amount : p.state}
+    const data = {amount : price.state}
     const clickHandler = async(e)=>{
          e.preventDefault();
          var amount1 = ''
@@ -34,8 +63,8 @@ const options = {
             key: key1, // Enter the Key ID generated from the Dashboard
             amount: amount1,
             currency: "INR",
-            name: "Soumya Corp.",
-            description: "Test Transaction",
+            name: "Unico Foods",
+            description: "Order Transaction",
             image: {Unico},
             order_id: id1,
             handler: async function (response) {
@@ -52,16 +81,22 @@ const options = {
                 alert(result.data.message);
                 if(result.data.message==="verified succesfully"){
                     console.log(result.data.data) ;
+                    
                     const data = {
-                        CustomerId : "11",
-                        firstName : "Saurabh" ,
-                        lastName : "Mishra" ,
+                        userId : user.userId ,
+                        CustomerId : users +1,
+                        firstName : user.firstName ,
+                        email : user.email ,
+                        lastName : user.lastName ,
                         address  : "Jp house bai sahab hi pared Gwalior" ,
                         appartment : "40/906",
                         city : "Gwalior",
                         pinCode : "474001",
                         phone : "6232536423",
-                        productIds : "1 ,2 ,3 ,4 ,5",
+                        orderSumery : {
+                           orders : (product) ,
+                            price : price.state,
+                        },
                         OId : result.data.data.razorpayOrderId,
                         PId : result.data.data.razorpayPaymentId
                     }
@@ -69,6 +104,14 @@ const options = {
                         console.log(res.data) ;
                         if(res.data.message==="Customer created successfully"){
                             alert("Order Recived SuccessFully") ;
+                            localStorage.removeItem("Cart") ;
+                            var flag = localStorage.Cart;
+                            // console.log(flag);
+                        if (flag === undefined) {
+                            localStorage.setItem("Cart", JSON.stringify([]));
+
+                            localStorage.setItem("quantity", JSON.stringify([]));
+  }
                             Navigate("/") ;
                         }
                     })

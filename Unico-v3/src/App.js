@@ -14,7 +14,7 @@ import Account from "./components/Account/Account";
 import Category1 from "./components/Category/Category1";
 import Category2 from "./components/Category/Category2";
 import Category3 from "./components/Category/Category3";
-import User from "./components/User/User";
+// import User from "./components/User/User";
 import Admin from "./components/Admin-pages/Admin";
 import AllProducts from "./components/Category/AllProducts";
 import Checkout from "./components/Checkout/Checkout";
@@ -22,12 +22,16 @@ import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   var flag = localStorage.Cart;
-  console.log(flag);
+  // console.log(flag);
   if (flag === undefined) {
     localStorage.setItem("Cart", JSON.stringify([]));
 
     localStorage.setItem("quantity", JSON.stringify([]));
   }
+  // var flagu = localStorage.user;
+  // if (flagu === undefined) {
+  //   localStorage.setItem("user", JSON.stringify([]));
+  // }
   return (
     <BrowserRouter>
       <AppContext>
