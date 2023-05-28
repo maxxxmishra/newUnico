@@ -51,10 +51,11 @@ const readAllCustomer = asyncHandler(async (req, res) => {
 });
 const readCustomerById = asyncHandler(async (req, res) => {
   try {
-    // console.log(req.body.data);
-    const customerCheck = await Customer.findOne({
-      CustomerId: req.body.data.CustomerId,
+    console.log(req.body.data);
+    const customerCheck = await Customer.find({
+      userId: req.body.data.userId,
     });
+    console.log(customerCheck);
     if (!customerCheck) {
       res
         .status(200)

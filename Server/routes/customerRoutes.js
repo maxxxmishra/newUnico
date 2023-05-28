@@ -20,7 +20,7 @@ const router = express.Router();
 
 router.post("/createCustomer", createCustomer);
 router.get("/readAllCustomer", readAllCustomer);
-router.get("/readCustomerById", readCustomerById);
+router.post("/readCustomerById", readCustomerById);
 router.put("/updateCustomer", updateCustomer);
 router.delete("/deleteCustomer", deleteCustomer);
 

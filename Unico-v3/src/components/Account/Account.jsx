@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./Account.css"
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import "../../css-config/mixins.scss"
+import axios from  'axios'
 
 
 const Account = () => {
   const Navigate =  useNavigate();
+  const data  = {
+    userId : JSON.parse(localStorage.user).userId
+  }
+  const [order ,setOrder] = useState('');
+
+  try {
+    axios.post("http://localhost:8080/api/v1/customer/readCustomerById" , {data : data}).then((res)=>{
+      console.log(res.data.data) ;
+      // setOrder(res.data.data) ;
+    })
+    
+  } catch (error) {
+    console.log(error) ;
+    
+  }
+
   const clickHandeler = ()=>{
     // localStorage.removeItem("user");
     var arr = JSON.parse(localStorage.user)
@@ -59,8 +76,9 @@ const Account = () => {
           </h1>
           <div className="last-text">
             <div className="text1">
-              {/* <h3>Order Details from backend</h3> */}
-              <h3>You Haven't placed any orders Yet</h3>
+              <h3>Order Details from backend</h3>
+              {/* {order}  */}
+              <h3></h3>
             </div>
           </div>
           <div className="ctas">
