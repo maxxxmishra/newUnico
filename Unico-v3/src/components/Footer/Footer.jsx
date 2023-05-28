@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="bottom-bar">
             <div className="bottom-bar-content">
                 <div className="fottext">
-                <Link className="link" to="https://www.linkedin.com/company/arroz-solution/">Developed by Arroz Solutions</Link>
+                Developed by<Link  to="https://www.linkedin.com/company/arroz-solution/"> Arroz Solutions</Link>
                 </div>
                 <img src={Payment} alt="" />
             </div>

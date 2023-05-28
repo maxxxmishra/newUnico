@@ -76,7 +76,7 @@ const Account = () => {
           </h1>
           <div className="last-text">
             <div className="text1">
-              <h3>Order Details from backend</h3>
+              <h3>Order Details </h3>
               {/* {order}  */}
               <h3></h3>
             </div>
