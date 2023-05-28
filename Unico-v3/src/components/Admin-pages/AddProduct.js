@@ -15,6 +15,11 @@ const AddJob = () => {
   const nutrition = useRef("");
   const productDescription = useRef("");
   var id = 0;
+
+  // const [Category, setCategory] = useState("");
+  var Category = "";
+  // console.log(Category);
+
   const Allpro = async () => {
     try {
       console.log("hn hn chal rha hai ");
@@ -42,7 +47,7 @@ const AddJob = () => {
 
     const data = {
       productId: id,
-      productCategory: productCategory.current.value,
+      productCategory: Category,
       productName: productName.current.value,
       price: price.current.value,
       productWeight: productWeight.current.value,
@@ -69,7 +74,7 @@ const AddJob = () => {
       alert("There is something wrong ");
     }
     // productId.current.value = "";
-    productCategory.current.value = "";
+    // productCategory = "";
     productName.current.value = "";
     price.current.value = "";
     productWeight.current.value = "";
@@ -79,6 +84,12 @@ const AddJob = () => {
     productImage.current.value = "";
     nutrition.current.value = "";
     productDescription.current.value = "";
+  };
+
+  const handelChange = (event) => {
+    console.log(event.target.value);
+    Category = event.target.value;
+    console.log(Category);
   };
   return (
     <div className="addjobbody">
@@ -92,13 +103,15 @@ const AddJob = () => {
           <div class="inputfield">
             <label>productCategory</label>
             <div class="custom_select">
-            <select>
-              <option value="">Select</option>
-              <option value="frontend">Category-1</option>
-              <option value="backend">Category-2</option>
-              <option value="fullstack">Category-3</option>
-            </select>
-          </div>
+              <select onChange={handelChange}>
+                <option value="">Select</option>
+                <option value="c1">
+                  <button>Category-1</button>
+                </option>
+                <option value="c2">Category-2</option>
+                <option value="c3">Category-3</option>
+              </select>
+            </div>
           </div>
           <div class="inputfield">
             <label>productName</label>
