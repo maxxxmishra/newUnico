@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="bottom-bar">
             <div className="bottom-bar-content">
                 <div className="fottext">
-                    ©Unico Foods, All Rights Reserved
+                <Link to="https://www.linkedin.com/company/arroz-solution/" className="link">Developed By Arroz Solutions</Link>
                 </div>
                 <img src={Payment} alt="" />
             </div>
