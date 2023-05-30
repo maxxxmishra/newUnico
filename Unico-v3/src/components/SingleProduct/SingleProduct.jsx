@@ -36,11 +36,11 @@ const SingleProduct = () => {
               <span className="desc">{pro.productDescription}</span>
 
               <div className="cart-buttons">
-                <div className="quantity-buttons">
+                {/* <div className="quantity-buttons">
                   <span>-</span>
                   <span>1</span>
                   <span>+</span>
-                </div>
+                </div> */}
                 <button className="add-to-cart-button">
                   <FaCartPlus size={20} />
                   Add to Cart
