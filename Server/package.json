@@ -6,6 +6,7 @@
 
   "scripts": {
     "start": "Node server.js",
+    "build": "npm i",
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1" 
     
