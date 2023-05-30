@@ -34,15 +34,15 @@ const ContactUs = () => {
       <div class="contact-container">
         <div class="contact-box">
           <div className="contact-left">
-            <h2>Get In Touch</h2>
+            <h2><u>Get In Touch</u></h2>
             <p>
               Hey👋🏻 shoot a message and we are all in to hear. <br />
-              Connect with us on WhatsApp or DM on Instagram too.
+              Connect with us on <a className="a-links" href="https://api.whatsapp.com/send?phone=919669559988&text=Hello" target="_blank">Whatsapp</a> or DM on <a className="a-links" href="https://www.instagram.com/">Instagram</a> too.
             </p>
           </div>
           <form ref={form} onSubmit={sendEmail}>
             <div class="contact-right">
-              <h2>WE ARE ALL EARS</h2>
+              <h2><u>WE ARE ALL EARS</u></h2>
               <input
                 type="text"
                 class="field"
